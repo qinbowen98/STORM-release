@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: storm
+Version: 0.1
+Summary: Your project description
+Author: Jiateng Dai
+Author-email: your.email@example.com
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-image
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: summary
