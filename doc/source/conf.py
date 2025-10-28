@@ -41,7 +41,7 @@ doctest_test_doctest_blocks = 'default'
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
-sys.path.insert(0, os.path.abspath('../../storm'))
+sys.path.insert(0, os.path.abspath('../..'))
 class Mock(MagicMock):
     @classmethod
     def __getattr__(cls, name):
