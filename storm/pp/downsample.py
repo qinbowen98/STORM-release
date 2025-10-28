@@ -1,8 +1,8 @@
 import os
-import cv2
+#import cv2
 import numpy as np
-import openslide
-import pyvips
+#import openslide
+#import pyvips
 
 def downsample_svs(input_svs_path, output_tiff_path, target_mpp=0.5):
     '''
