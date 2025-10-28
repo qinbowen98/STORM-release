@@ -1,0 +1,5 @@
+sphinx>=8.0
+sphinx-rtd-theme
+jupyter-sphinx
+nbsphinx
+ipython
