@@ -6,3 +6,9 @@ ipython
 numpy
 pandas
 pyyaml
+h5py
+scanpy
+torch
+anndata
+matplotlib
+scikit-image
