@@ -47,5 +47,5 @@ class Mock(MagicMock):
     @classmethod
     def __getattr__(cls, name):
         return MagicMock()
-MOCK_MODULES = ['spams','openslide','pyvips']
+MOCK_MODULES = ['spams','openslide','pyvips','cv2', 'models']
 sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
