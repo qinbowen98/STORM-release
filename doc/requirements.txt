@@ -3,3 +3,6 @@ sphinx-rtd-theme
 jupyter-sphinx
 nbsphinx
 ipython
+numpy
+pandas
+pyyaml
