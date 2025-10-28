@@ -3,7 +3,7 @@ This module provides functions for image color processing,
 including stain matrix calculation and color channel extraction.
 """
 
-#import spams
+import spams
 import numpy as np
 from skimage import io, color, img_as_ubyte, filters
 from tqdm import tqdm
