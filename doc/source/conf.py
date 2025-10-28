@@ -34,7 +34,7 @@ exclude_patterns = []
 napoleon_google_docstring = True
 napoleon_numpy_docstring = False
 doctest_test_doctest_blocks = 'default'
-
+jupyter_execute_notebooks = "off"
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
