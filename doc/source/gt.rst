@@ -1,7 +1,7 @@
 gt
 ==========================
 
-.. automodule:: storm.HDReader
+.. automodule:: storm.gt
    :members:
    :undoc-members:
    :show-inheritance:
