@@ -204,27 +204,6 @@ def exc_he(img, stain_matrix):
 
     Returns:
         tuple: A tuple containing the Hematoxylin and Eosin channel images.
-    
-    .. jupyter-execute::
-        
-        from storm.pp import exc_he,Cal_CMatrix
-        import matplotlib.pyplot as plt
-        from skimage import io
-        import os
-        img_path = '../../hm0477/spatial/tissue_hires_image.png'
-        cmtx = Cal_CMatrix()
-        cmtx.readFile(img_path)
-        stain_matrix =cmtx.get_cmtx()
-        img = io.imread(img_path)
-        h_image, e_image = exc_he(img, stain_matrix)
-        fig, ax = plt.subplots(1, 3, figsize=(12, 4))
-        ax[0].imshow(img)
-        ax[0].set_title('Original Image')
-        ax[1].imshow(h_image)
-        ax[1].set_title('Hematoxylin Image')
-        ax[2].imshow(e_image)
-        ax[2].set_title('Eosin Image')
-        plt.show()
     """
     # Calculate the concentration matrix
     src_conc = _concentration(img, stain_matrix)
@@ -315,18 +294,6 @@ class Cal_CMatrix:
 
         Returns:
             np.ndarray: The calculated stain color matrix.
-        
-        .. jupyter-execute::
-        
-            from skimage import io
-            import os
-
-            from storm.pp import Cal_CMatrix
-            img_path='../Visium_Human_Breast_Cancer/spatial/tissue_hires_image.png'
-            cmtx = Cal_CMatrix()
-            cmtx.readFile(img_path)
-            print(cmtx.get_cmtx())
-
         """
 
         return process_img(self.he, patch_size=1000, tissue_threshold=0.45, max_patches=20, method=method)
