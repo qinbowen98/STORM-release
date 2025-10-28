@@ -20,7 +20,7 @@ print(cmtx.get_cmtx())
 from storm.VisiumReader import VisiumReader
 from storm.pp import VisiumPreprocesser
 Reader=VisiumReader()
-Reader.read_all(folder_path="../Visium_Human_Breast_Cancer",gene_token="../gene_token_homologs.csv",method="binary",key="symbol")
+Reader.read_all(folder_path="../../Visium_Human_Breast_Cancer",gene_token="../../gene_token_homologs.csv",method="binary",key="symbol")
 processer=VisiumPreprocesser(Reader,224)
 processer.process_tpl()
 processer.round_spot()
@@ -38,7 +38,7 @@ from storm.pp import VisiumPreprocesser
 import matplotlib.pyplot as plt
 
 Reader=VisiumReader()
-Reader.read_all(folder_path="../Visium_Human_Breast_Cancer",gene_token="../gene_token_homologs.csv",method="binary",key="symbol")
+Reader.read_all(folder_path="../../Visium_Human_Breast_Cancer",gene_token="../../gene_token_homologs.csv",method="binary",key="symbol")
 
 processer=VisiumPreprocesser(Reader,224)
 _,_,_,_,raw_crop_he,crop_he=processer.process_img()
@@ -56,7 +56,7 @@ from storm.pp import exc_he,Cal_CMatrix
 import matplotlib.pyplot as plt
 from skimage import io
 import os
-img_path = '../hm0477/spatial/tissue_hires_image.png'
+img_path = '../../hm0477/spatial/tissue_hires_image.png'
 cmtx = Cal_CMatrix()
 cmtx.readFile(img_path)
 stain_matrix =cmtx.get_cmtx()
@@ -78,7 +78,7 @@ plt.show()
 from skimage import io
 import matplotlib.pyplot as plt
 from storm.pp import exc_tissue
-img = io.imread('../Visium_Human_Breast_Cancer/spatial/tissue_hires_image.png')
+img = io.imread('../../Visium_Human_Breast_Cancer/spatial/tissue_hires_image.png')
 fig, axes = plt.subplots(1, 2, figsize=(10, 5))
 axes[0].imshow(img)
 axes[0].axis('off')
@@ -94,7 +94,7 @@ plt.show()
 from skimage import io
 import matplotlib.pyplot as plt
 from storm.pp import white_balance_using_white_point,exc_tissue
-img = io.imread('../hm0477/spatial/tissue_hires_image.png')
+img = io.imread('../../hm0477/spatial/tissue_hires_image.png')
 mask=exc_tissue(img,method='otsu')
 fig, axes = plt.subplots(1, 2, figsize=(10, 5))
 axes[0].imshow(img)
