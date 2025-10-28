@@ -12,7 +12,7 @@ documentation for details.
 
 .. toctree::
    :maxdepth: 2
-   :caption: 内容:
+   :caption: 内容
 
    HDReader
    VisiumReader
