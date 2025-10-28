@@ -1,7 +1,7 @@
 import os
 import h5py
 import numpy as np
-import openslide
+#import openslide
 
 def extract_tiles(tiff_folder, h5_folder, output_folder):
     '''
