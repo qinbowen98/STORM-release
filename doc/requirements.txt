@@ -12,4 +12,3 @@ torch
 anndata
 matplotlib
 scikit-image
-spams
