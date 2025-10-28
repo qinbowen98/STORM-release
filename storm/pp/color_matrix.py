@@ -211,7 +211,7 @@ def exc_he(img, stain_matrix):
         import matplotlib.pyplot as plt
         from skimage import io
         import os
-        img_path = '../hm0477/spatial/tissue_hires_image.png'
+        img_path = '../../hm0477/spatial/tissue_hires_image.png'
         cmtx = Cal_CMatrix()
         cmtx.readFile(img_path)
         stain_matrix =cmtx.get_cmtx()
