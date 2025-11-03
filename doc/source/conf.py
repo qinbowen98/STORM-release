@@ -30,8 +30,7 @@ extensions = [
 templates_path = ['_templates']
 exclude_patterns = []
 
-# ✅ 禁止执行所有 jupyter 执行单元
-jupyter_execute_notebooks = "off"
+jupyter_execute_notebooks = "auto"
 
 # -- Options for HTML output -------------------------------------------------
 html_theme = 'sphinx_rtd_theme'
