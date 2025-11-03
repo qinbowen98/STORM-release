@@ -32,7 +32,6 @@ exclude_patterns = []
 
 # ✅ 禁止执行所有 jupyter 执行单元
 jupyter_execute_notebooks = "off"
-nbsphinx_execute = 'never'
 
 # -- Options for HTML output -------------------------------------------------
 html_theme = 'sphinx_rtd_theme'
