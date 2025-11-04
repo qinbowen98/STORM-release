@@ -9,7 +9,7 @@ from unittest.mock import MagicMock
 sys.path.insert(0, os.path.abspath('../..'))
 
 # ✅ Mock 不可安装模块（必须在此位置）
-MOCK_MODULES = ['spams', 'openslide', 'pyvips', 'cv2', 'models']
+MOCK_MODULES = ['spams', 'openslide', 'pyvips', 'cv2']
 for mod in MOCK_MODULES:
     sys.modules[mod] = MagicMock()
 
