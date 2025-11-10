@@ -33,22 +33,6 @@ class HDPreprocesser:
     This class provides methods to process the HD data read by an HDReader instance.
     It can process the grid, image, tissue, and matrix data, and save the processed data to files.
     
-    Examples:
-        >>> # init HDReader 
-        >>> reader = HDReader()
-        >>> prefix = "test"
-        >>> token_path = "path/to/token/file.csv"
-        >>> # init HDPreprocesser
-        >>> preprocessor = HDPreprocesser(reader, prefix, token_path)
-        >>> patch_size = 10
-        >>> dst_res = 5
-        >>> bin_res = 2
-        >>> preprocessor.process_all(patch_size, dst_res, bin_res)
-        >>> # save File
-        >>> imgrid_path = "image_grid.parquet"
-        >>> fhe_path = "processed_image.png"
-        >>> h5ad_path = "adata.h5ad"
-        >>> preprocessor.saveFile(imgrid_path, fhe_path, h5ad_path)
     """
 
     def __init__(self, Reader, prefix, token_path):
