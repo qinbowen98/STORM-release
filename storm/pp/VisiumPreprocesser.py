@@ -463,7 +463,7 @@ class VisiumPreprocesser:
             import matplotlib.pyplot as plt
 
             Reader=VisiumReader()
-            Reader.read_all(folder_path="../Visium_Human_Breast_Cancer",gene_token="../gene_token_homologs.csv",method="binary",key="symbol")
+            Reader.read_all(folder_path="../../Visium_Human_Breast_Cancer",gene_token="../../gene_token_homologs.csv",method="binary",key="symbol")
 
             processer=VisiumPreprocesser(Reader,224)
             _,_,_,_,raw_crop_he,crop_he=processer.process_img()
@@ -495,7 +495,7 @@ class VisiumPreprocesser:
             from storm.VisiumReader import VisiumReader
             from storm.pp import VisiumPreprocesser
             Reader=VisiumReader()
-            Reader.read_all(folder_path="../Visium_Human_Breast_Cancer",gene_token="../gene_token_homologs.csv",method="binary",key="symbol")
+            Reader.read_all(folder_path="../../Visium_Human_Breast_Cancer",gene_token="../../gene_token_homologs.csv",method="binary",key="symbol")
             processer=VisiumPreprocesser(Reader,224)
             processer.process_tpl()
             processer.round_spot()

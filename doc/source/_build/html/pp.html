@@ -9,7 +9,7 @@
   <title>pp &mdash; STORM  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+      <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css?v=572af1d6" />
       <link rel="stylesheet" type="text/css" href="_static/thebelab.css" />
 
   
@@ -467,7 +467,7 @@ and concatenates the resulting AnnData objects.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">storm.VisiumReader</span> <span class="kn">import</span> <span class="n">VisiumReader</span>
 <span class="kn">from</span> <span class="nn">storm.pp</span> <span class="kn">import</span> <span class="n">VisiumPreprocesser</span>
 <span class="n">Reader</span><span class="o">=</span><span class="n">VisiumReader</span><span class="p">()</span>
-<span class="n">Reader</span><span class="o">.</span><span class="n">read_all</span><span class="p">(</span><span class="n">folder_path</span><span class="o">=</span><span class="s2">&quot;../Visium_Human_Breast_Cancer&quot;</span><span class="p">,</span><span class="n">gene_token</span><span class="o">=</span><span class="s2">&quot;../gene_token_homologs.csv&quot;</span><span class="p">,</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;binary&quot;</span><span class="p">,</span><span class="n">key</span><span class="o">=</span><span class="s2">&quot;symbol&quot;</span><span class="p">)</span>
+<span class="n">Reader</span><span class="o">.</span><span class="n">read_all</span><span class="p">(</span><span class="n">folder_path</span><span class="o">=</span><span class="s2">&quot;../../Visium_Human_Breast_Cancer&quot;</span><span class="p">,</span><span class="n">gene_token</span><span class="o">=</span><span class="s2">&quot;../../gene_token_homologs.csv&quot;</span><span class="p">,</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;binary&quot;</span><span class="p">,</span><span class="n">key</span><span class="o">=</span><span class="s2">&quot;symbol&quot;</span><span class="p">)</span>
 <span class="n">processer</span><span class="o">=</span><span class="n">VisiumPreprocesser</span><span class="p">(</span><span class="n">Reader</span><span class="p">,</span><span class="mi">224</span><span class="p">)</span>
 <span class="n">processer</span><span class="o">.</span><span class="n">process_tpl</span><span class="p">()</span>
 <span class="n">processer</span><span class="o">.</span><span class="n">round_spot</span><span class="p">()</span>
@@ -531,7 +531,7 @@ in the processed H&amp;E image. Each element corresponds to a color channel (e.g
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="n">Reader</span><span class="o">=</span><span class="n">VisiumReader</span><span class="p">()</span>
-<span class="n">Reader</span><span class="o">.</span><span class="n">read_all</span><span class="p">(</span><span class="n">folder_path</span><span class="o">=</span><span class="s2">&quot;../Visium_Human_Breast_Cancer&quot;</span><span class="p">,</span><span class="n">gene_token</span><span class="o">=</span><span class="s2">&quot;../gene_token_homologs.csv&quot;</span><span class="p">,</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;binary&quot;</span><span class="p">,</span><span class="n">key</span><span class="o">=</span><span class="s2">&quot;symbol&quot;</span><span class="p">)</span>
+<span class="n">Reader</span><span class="o">.</span><span class="n">read_all</span><span class="p">(</span><span class="n">folder_path</span><span class="o">=</span><span class="s2">&quot;../../Visium_Human_Breast_Cancer&quot;</span><span class="p">,</span><span class="n">gene_token</span><span class="o">=</span><span class="s2">&quot;../../gene_token_homologs.csv&quot;</span><span class="p">,</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;binary&quot;</span><span class="p">,</span><span class="n">key</span><span class="o">=</span><span class="s2">&quot;symbol&quot;</span><span class="p">)</span>
 
 <span class="n">processer</span><span class="o">=</span><span class="n">VisiumPreprocesser</span><span class="p">(</span><span class="n">Reader</span><span class="p">,</span><span class="mi">224</span><span class="p">)</span>
 <span class="n">_</span><span class="p">,</span><span class="n">_</span><span class="p">,</span><span class="n">_</span><span class="p">,</span><span class="n">_</span><span class="p">,</span><span class="n">raw_crop_he</span><span class="p">,</span><span class="n">crop_he</span><span class="o">=</span><span class="n">processer</span><span class="o">.</span><span class="n">process_img</span><span class="p">()</span>
