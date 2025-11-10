@@ -1,15 +1,14 @@
 import yaml
 import torch
 from skimage import io
-from models.Storm import Storm
-from pp.VisiumPreprocesser import VisiumPreprocesser
-from VisiumReader import VisiumReader
+from ..models.Storm import Storm
+from ..pp.VisiumPreprocesser import VisiumPreprocesser
+from ..VisiumReader import VisiumReader
 import os
 import math
 import numpy as np
 from datetime import datetime
 from torch.utils.data import Dataset, DataLoader
-from models.Storm import Storm
 from scipy.sparse import csr_matrix
 from tqdm import tqdm
 import time
