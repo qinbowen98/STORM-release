@@ -26,20 +26,6 @@ def exc_tissue(img, method='lumin', l_threshold=0.8):
     Raises:
         ValueError: If the `method` argument is not 'lumin' or 'otsu'.
 
-    .. jupyter-execute::
-    
-        from skimage import io
-        import matplotlib.pyplot as plt
-        from storm.pp import exc_tissue
-        img = io.imread('../Visium_Human_Breast_Cancer/spatial/tissue_hires_image.png')
-        fig, axes = plt.subplots(1, 2, figsize=(10, 5))
-        axes[0].imshow(img)
-        axes[0].axis('off')
-        mask=exc_tissue(img,method='otsu')
-        axes[1].imshow(mask)
-        axes[1].axis('off')
-        plt.show()
-
     """
     if method not in ['lumin', 'otsu']:
         raise ValueError("Method should be 'lumin' or 'otsu'")
@@ -76,22 +62,6 @@ def white_balance_using_white_point(img, mask):
     Returns:
         ndarray: The white - balanced RGB image with the same shape as the input image.
             The pixel values are in the range [0, 255].
-
-    .. jupyter-execute::
-
-        from skimage import io
-        import matplotlib.pyplot as plt
-        from storm.pp import white_balance_using_white_point,exc_tissue
-        img = io.imread('../hm0477/spatial/tissue_hires_image.png')
-        mask=exc_tissue(img,method='otsu')
-        fig, axes = plt.subplots(1, 2, figsize=(10, 5))
-        axes[0].imshow(img)
-        axes[0].axis('off')
-        img_balanced=white_balance_using_white_point(img,mask)
-        axes[1].imshow(img_balanced)
-        axes[1].axis('off')
-        plt.show()
-
 
     """
     img_float = img.astype(np.float32) / 255.0

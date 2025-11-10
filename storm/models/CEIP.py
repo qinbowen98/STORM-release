@@ -4,8 +4,8 @@ import torch.nn.functional as F
 from .build import MODELS
 from timm.layers import PatchEmbed
 from timm.models.layers import DropPath, trunc_normal_
-from utils.logger import *
-from utils.checkpoint import get_missing_parameters_message, get_unexpected_parameters_message
+from storm.utils.logger import *
+from storm.utils.checkpoint import get_missing_parameters_message, get_unexpected_parameters_message
 from models.transformer import TransformerEncoder
 import math
 

@@ -1,5 +1,5 @@
-from utils.HD_load import *
-from utils.HD_utils import *
+from storm.utils.HD_load import *
+from storm.utils.HD_utils import *
 import gc
 import numpy as np
 

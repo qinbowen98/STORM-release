@@ -9,7 +9,7 @@
   <title>gt &mdash; STORM  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+      <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css?v=572af1d6" />
       <link rel="stylesheet" type="text/css" href="_static/thebelab.css" />
 
   
@@ -46,18 +46,18 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">内容:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Content</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="HDReader.html">HDReader</a></li>
 <li class="toctree-l1"><a class="reference internal" href="VisiumReader.html">VisiumReader</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pp.html">pp</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">gt</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#gt.get_embedding_RGB"><code class="docutils literal notranslate"><span class="pre">get_embedding_RGB()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#gt.get_embedding_all"><code class="docutils literal notranslate"><span class="pre">get_embedding_all()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#gt.get_encoder"><code class="docutils literal notranslate"><span class="pre">get_encoder()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#gt.get_expr"><code class="docutils literal notranslate"><span class="pre">get_expr()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#gt.get_rgb_and_expr"><code class="docutils literal notranslate"><span class="pre">get_rgb_and_expr()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#gt.process_single_sample"><code class="docutils literal notranslate"><span class="pre">process_single_sample()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#storm.gt.get_embedding_RGB"><code class="docutils literal notranslate"><span class="pre">get_embedding_RGB()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#storm.gt.get_embedding_all"><code class="docutils literal notranslate"><span class="pre">get_embedding_all()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#storm.gt.get_encoder"><code class="docutils literal notranslate"><span class="pre">get_encoder()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#storm.gt.get_expr"><code class="docutils literal notranslate"><span class="pre">get_expr()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#storm.gt.get_rgb_and_expr"><code class="docutils literal notranslate"><span class="pre">get_rgb_and_expr()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#storm.gt.process_single_sample"><code class="docutils literal notranslate"><span class="pre">process_single_sample()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -86,11 +86,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-gt">
-<span id="gt"></span><h1>gt<a class="headerlink" href="#module-gt" title="Link to this heading"></a></h1>
+  <section id="module-storm.gt">
+<span id="gt"></span><h1>gt<a class="headerlink" href="#module-storm.gt" title="Link to this heading"></a></h1>
 <dl class="py function">
-<dt class="sig sig-object py" id="gt.get_embedding_RGB">
-<span class="sig-prename descclassname"><span class="pre">gt.</span></span><span class="sig-name descname"><span class="pre">get_embedding_RGB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ckpt_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rgb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gt.get_embedding_RGB" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="storm.gt.get_embedding_RGB">
+<span class="sig-prename descclassname"><span class="pre">storm.gt.</span></span><span class="sig-name descname"><span class="pre">get_embedding_RGB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ckpt_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rgb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#storm.gt.get_embedding_RGB" title="Link to this definition"></a></dt>
 <dd><p>Extract feature embedding vectors from RGB images.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -112,8 +112,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="gt.get_embedding_all">
-<span class="sig-prename descclassname"><span class="pre">gt.</span></span><span class="sig-name descname"><span class="pre">get_embedding_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ckpt_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rgb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gt.get_embedding_all" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="storm.gt.get_embedding_all">
+<span class="sig-prename descclassname"><span class="pre">storm.gt.</span></span><span class="sig-name descname"><span class="pre">get_embedding_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ckpt_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rgb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#storm.gt.get_embedding_all" title="Link to this definition"></a></dt>
 <dd><p>Extract joint embedding vectors from RGB images and expression matrices.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -136,8 +136,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="gt.get_encoder">
-<span class="sig-prename descclassname"><span class="pre">gt.</span></span><span class="sig-name descname"><span class="pre">get_encoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ckpt_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gt.get_encoder" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="storm.gt.get_encoder">
+<span class="sig-prename descclassname"><span class="pre">storm.gt.</span></span><span class="sig-name descname"><span class="pre">get_encoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ckpt_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#storm.gt.get_encoder" title="Link to this definition"></a></dt>
 <dd><p>Load and initialize the STORM encoder model.</p>
 <p>Loads the configuration file, constructs the model architecture,
 loads pre-trained weights, and sets the model to evaluation mode.</p>
@@ -159,8 +159,8 @@ loads pre-trained weights, and sets the model to evaluation mode.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="gt.get_expr">
-<span class="sig-prename descclassname"><span class="pre">gt.</span></span><span class="sig-name descname"><span class="pre">get_expr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ckpt_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rgb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gt.get_expr" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="storm.gt.get_expr">
+<span class="sig-prename descclassname"><span class="pre">storm.gt.</span></span><span class="sig-name descname"><span class="pre">get_expr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ckpt_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rgb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cpu'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#storm.gt.get_expr" title="Link to this definition"></a></dt>
 <dd><p>Predict gene expression matrix from RGB images.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -182,8 +182,8 @@ loads pre-trained weights, and sets the model to evaluation mode.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="gt.get_rgb_and_expr">
-<span class="sig-prename descclassname"><span class="pre">gt.</span></span><span class="sig-name descname"><span class="pre">get_rgb_and_expr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tif_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expr_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gt.get_rgb_and_expr" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="storm.gt.get_rgb_and_expr">
+<span class="sig-prename descclassname"><span class="pre">storm.gt.</span></span><span class="sig-name descname"><span class="pre">get_rgb_and_expr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tif_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expr_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#storm.gt.get_rgb_and_expr" title="Link to this definition"></a></dt>
 <dd><p>Load TIF images and corresponding expression matrices.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -206,8 +206,8 @@ loads pre-trained weights, and sets the model to evaluation mode.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="gt.process_single_sample">
-<span class="sig-prename descclassname"><span class="pre">gt.</span></span><span class="sig-name descname"><span class="pre">process_single_sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gt.process_single_sample" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="storm.gt.process_single_sample">
+<span class="sig-prename descclassname"><span class="pre">storm.gt.</span></span><span class="sig-name descname"><span class="pre">process_single_sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#storm.gt.process_single_sample" title="Link to this definition"></a></dt>
 <dd><p>Process a single tissue sample to generate feature embeddings.</p>
 <p>Reads input data, processes it, and generates either RGB-only or joint
 RGB-expression embeddings based on the specified mode. Handles error

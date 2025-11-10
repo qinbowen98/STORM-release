@@ -9,7 +9,7 @@
   <title>VisiumReader &mdash; STORM  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+      <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css?v=572af1d6" />
       <link rel="stylesheet" type="text/css" href="_static/thebelab.css" />
 
   
@@ -47,15 +47,15 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">内容:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Content</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="HDReader.html">HDReader</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">VisiumReader</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#VisiumReader.VisiumReader"><code class="docutils literal notranslate"><span class="pre">VisiumReader</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#VisiumReader.VisiumReader.read_all"><code class="docutils literal notranslate"><span class="pre">VisiumReader.read_all()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#VisiumReader.VisiumReader.read_h5"><code class="docutils literal notranslate"><span class="pre">VisiumReader.read_h5()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#VisiumReader.VisiumReader.read_img"><code class="docutils literal notranslate"><span class="pre">VisiumReader.read_img()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#VisiumReader.VisiumReader.read_tissue_position"><code class="docutils literal notranslate"><span class="pre">VisiumReader.read_tissue_position()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#storm.VisiumReader.VisiumReader"><code class="docutils literal notranslate"><span class="pre">VisiumReader</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#storm.VisiumReader.VisiumReader.read_all"><code class="docutils literal notranslate"><span class="pre">VisiumReader.read_all()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#storm.VisiumReader.VisiumReader.read_h5"><code class="docutils literal notranslate"><span class="pre">VisiumReader.read_h5()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#storm.VisiumReader.VisiumReader.read_img"><code class="docutils literal notranslate"><span class="pre">VisiumReader.read_img()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#storm.VisiumReader.VisiumReader.read_tissue_position"><code class="docutils literal notranslate"><span class="pre">VisiumReader.read_tissue_position()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -88,19 +88,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-VisiumReader">
-<span id="visiumreader"></span><h1>VisiumReader<a class="headerlink" href="#module-VisiumReader" title="Link to this heading"></a></h1>
+  <section id="module-storm.VisiumReader">
+<span id="visiumreader"></span><h1>VisiumReader<a class="headerlink" href="#module-storm.VisiumReader" title="Link to this heading"></a></h1>
 <p>This module provides the VisiumReader class for reading Visium data.</p>
 <dl class="py class">
-<dt class="sig sig-object py" id="VisiumReader.VisiumReader">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">VisiumReader.</span></span><span class="sig-name descname"><span class="pre">VisiumReader</span></span><a class="headerlink" href="#VisiumReader.VisiumReader" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="storm.VisiumReader.VisiumReader">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">storm.VisiumReader.</span></span><span class="sig-name descname"><span class="pre">VisiumReader</span></span><a class="headerlink" href="#storm.VisiumReader.VisiumReader" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A class for reading Visium spatial standard data files.</p>
 <p>This class provides methods to read image files, tissue position information,
 and H5 files from a specified folder, and store relevant data in class attributes.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="VisiumReader.VisiumReader.read_all">
-<span class="sig-name descname"><span class="pre">read_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folder_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gene_token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">medium_token_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VisiumReader.VisiumReader.read_all" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="storm.VisiumReader.VisiumReader.read_all">
+<span class="sig-name descname"><span class="pre">read_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folder_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gene_token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">medium_token_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#storm.VisiumReader.VisiumReader.read_all" title="Link to this definition"></a></dt>
 <dd><p>Read all necessary Visium data files from the specified folder.</p>
 <p>This method calls other reading methods to read the image, tissue position information,
 and H5 file in sequence, and stores the data in class attributes.</p>
@@ -118,54 +118,11 @@ and H5 file in sequence, and stores the data in class attributes.</p>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
-<div class="jupyter_cell jupyter_container docutils container">
-<div class="cell_input code_cell docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">storm.VisiumReader</span> <span class="kn">import</span> <span class="n">VisiumReader</span>
-
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="n">Reader</span><span class="o">=</span><span class="n">VisiumReader</span><span class="p">()</span>
-<span class="n">Reader</span><span class="o">.</span><span class="n">read_all</span><span class="p">(</span><span class="n">folder_path</span><span class="o">=</span><span class="s2">&quot;../Visium_Human_Breast_Cancer&quot;</span><span class="p">,</span><span class="n">gene_token</span><span class="o">=</span><span class="s2">&quot;../gene_token_homologs.csv&quot;</span><span class="p">,</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;binary&quot;</span><span class="p">,</span><span class="n">key</span><span class="o">=</span><span class="s2">&quot;symbol&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">Reader</span><span class="o">.</span><span class="n">raw_he</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">Reader</span><span class="o">.</span><span class="n">adata</span> <span class="p">,</span> <span class="n">Reader</span><span class="o">.</span><span class="n">tissue_position_list</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="p">,</span> <span class="n">Reader</span><span class="o">.</span><span class="n">scaleJson</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>gene id matches:
-human:15597 
-mouse:16
-</pre></div>
-</div>
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>AnnData object with n_obs × n_vars = 4898 × 15757
-    var: &#39;gene_ids_x&#39;, &#39;feature_types&#39;, &#39;genome&#39;, &#39;symbol_x&#39;, &#39;gene_ids_y&#39;, &#39;symbol_y&#39;                     in_tissue  array_row  array_col  pxl_row_in_fullres  \
-barcode                                                                   
-ACGCCTGACACGCGCT-1          1        0.0        0.0              4650.0   
-TACCGATCCAACACTT-1          1        1.0        1.0              4887.0   
-ATTAAAGCGGACGAGC-1          1        0.0        2.0              4651.0   
-GATAAGGGACGATTAG-1          1        1.0        3.0              4888.0   
-GTGCAAATCACCAATA-1          1        0.0        4.0              4653.0   
-
-                    pxl_col_in_fullres  
-barcode                                 
-ACGCCTGACACGCGCT-1             12203.0  
-TACCGATCCAACACTT-1             12338.0  
-ATTAAAGCGGACGAGC-1             12475.0  
-GATAAGGGACGATTAG-1             12609.0  
-GTGCAAATCACCAATA-1             12747.0      tissue_hires_scalef  tissue_lowres_scalef  fiducial_diameter_fullres  \
-0             0.048109              0.014433                   285.1934   
-
-   spot_diameter_fullres  
-0               176.5483  
-</pre></div>
-</div>
-<img alt="_images/VisiumReader_0_3.png" src="_images/VisiumReader_0_3.png" />
-</div>
-</div>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="VisiumReader.VisiumReader.read_h5">
-<span class="sig-name descname"><span class="pre">read_h5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h5_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gene_token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">medium_token_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VisiumReader.VisiumReader.read_h5" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="storm.VisiumReader.VisiumReader.read_h5">
+<span class="sig-name descname"><span class="pre">read_h5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h5_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gene_token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">medium_token_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#storm.VisiumReader.VisiumReader.read_h5" title="Link to this definition"></a></dt>
 <dd><p>Read H5 or MTX files and process the data based on the specified method.</p>
 <p>This method reads single - cell data from H5 or MTX files, sets the gene token,
 and processes the data matrix according to the specified method.</p>
@@ -183,32 +140,11 @@ and processes the data matrix according to the specified method.</p>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
-<div class="jupyter_cell jupyter_container docutils container">
-<div class="cell_input code_cell docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">storm.VisiumReader</span> <span class="kn">import</span> <span class="n">VisiumReader</span>
-<span class="n">Reader</span><span class="o">=</span><span class="n">VisiumReader</span><span class="p">()</span>
-<span class="n">Reader</span><span class="o">.</span><span class="n">read_h5</span><span class="p">(</span><span class="n">h5_path</span><span class="o">=</span><span class="s2">&quot;../Visium_Human_Breast_Cancer/filtered_feature_bc_matrix.h5&quot;</span><span class="p">,</span><span class="n">gene_token</span><span class="o">=</span><span class="s2">&quot;../gene_token_homologs.csv&quot;</span><span class="p">,</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;binary&quot;</span><span class="p">,</span><span class="n">key</span><span class="o">=</span><span class="s2">&quot;symbol&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">Reader</span><span class="o">.</span><span class="n">adata</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>gene id matches:
-human:15597 
-mouse:16
-</pre></div>
-</div>
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>AnnData object with n_obs × n_vars = 4898 × 15757
-    var: &#39;gene_ids_x&#39;, &#39;feature_types&#39;, &#39;genome&#39;, &#39;symbol_x&#39;, &#39;gene_ids_y&#39;, &#39;symbol_y&#39;
-</pre></div>
-</div>
-</div>
-</div>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="VisiumReader.VisiumReader.read_img">
-<span class="sig-name descname"><span class="pre">read_img</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_img_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VisiumReader.VisiumReader.read_img" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="storm.VisiumReader.VisiumReader.read_img">
+<span class="sig-name descname"><span class="pre">read_img</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_img_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#storm.VisiumReader.VisiumReader.read_img" title="Link to this definition"></a></dt>
 <dd><p>Read an image file from the specified path and store it in a class attribute.</p>
 <p>If the image has 4 channels (RGBA), it will be converted to 3 channels (RGB).</p>
 <dl class="field-list simple">
@@ -219,29 +155,11 @@ mouse:16
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
-<div class="jupyter_cell jupyter_container docutils container">
-<div class="cell_input code_cell docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">storm.VisiumReader</span> <span class="kn">import</span> <span class="n">VisiumReader</span>
-
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="n">Reader</span><span class="o">=</span><span class="n">VisiumReader</span><span class="p">()</span>
-<span class="n">Reader</span><span class="o">.</span><span class="n">read_img</span><span class="p">(</span><span class="s2">&quot;../Visium_Human_Breast_Cancer/spatial/tissue_hires_image.png&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">Reader</span><span class="o">.</span><span class="n">raw_he</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x1c43e607160&gt;
-</pre></div>
-</div>
-<img alt="_images/VisiumReader_2_1.png" src="_images/VisiumReader_2_1.png" />
-</div>
-</div>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="VisiumReader.VisiumReader.read_tissue_position">
-<span class="sig-name descname"><span class="pre">read_tissue_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_tpl_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">json_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VisiumReader.VisiumReader.read_tissue_position" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="storm.VisiumReader.VisiumReader.read_tissue_position">
+<span class="sig-name descname"><span class="pre">read_tissue_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_tpl_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">json_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#storm.VisiumReader.VisiumReader.read_tissue_position" title="Link to this definition"></a></dt>
 <dd><p>Read tissue position information from CSV and JSON files.</p>
 <p>This method reads the tissue position data from a CSV file, processes the data
 based on the number of columns, sets the index to ‘barcode’, filters the data,
@@ -257,37 +175,6 @@ converts data types, and reads scale information from a JSON file.</p>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
-<div class="jupyter_cell jupyter_container docutils container">
-<div class="cell_input code_cell docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">storm.VisiumReader</span> <span class="kn">import</span> <span class="n">VisiumReader</span>
-<span class="n">Reader</span><span class="o">=</span><span class="n">VisiumReader</span><span class="p">()</span>
-<span class="n">base_path</span><span class="o">=</span><span class="s2">&quot;../Visium_Human_Breast_Cancer/spatial&quot;</span>
-<span class="n">Reader</span><span class="o">.</span><span class="n">read_tissue_position</span><span class="p">(</span><span class="n">raw_tpl_path</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">base_path</span><span class="si">}</span><span class="s2">/tissue_positions_list.csv&quot;</span><span class="p">,</span>
-                            <span class="n">json_path</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">base_path</span><span class="si">}</span><span class="s2">/scalefactors_json.json&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">Reader</span><span class="o">.</span><span class="n">tissue_position_list</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>                    in_tissue  array_row  array_col  pxl_row_in_fullres  \
-barcode                                                                   
-ACGCCTGACACGCGCT-1          1        0.0        0.0              4650.0   
-TACCGATCCAACACTT-1          1        1.0        1.0              4887.0   
-ATTAAAGCGGACGAGC-1          1        0.0        2.0              4651.0   
-GATAAGGGACGATTAG-1          1        1.0        3.0              4888.0   
-GTGCAAATCACCAATA-1          1        0.0        4.0              4653.0   
-
-                    pxl_col_in_fullres  
-barcode                                 
-ACGCCTGACACGCGCT-1             12203.0  
-TACCGATCCAACACTT-1             12338.0  
-ATTAAAGCGGACGAGC-1             12475.0  
-GATAAGGGACGATTAG-1             12609.0  
-GTGCAAATCACCAATA-1             12747.0  
-</pre></div>
-</div>
-</div>
-</div>
 </dd></dl>
 
 </dd></dl>

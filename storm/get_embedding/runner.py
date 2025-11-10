@@ -4,10 +4,10 @@ import pandas as pd
 import torch
 import torch.nn as nn
 from models import builder
-from utils import dist_utils
+from storm.utils import dist_utils
 import time
-from utils.logger import *
-from utils.AverageMeter import AverageMeter
+from storm.utils.logger import *
+from storm.utils.AverageMeter import AverageMeter
 import pickle
 import numpy as np
 class AccMetric:

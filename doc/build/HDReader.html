@@ -9,7 +9,7 @@
   <title>HDReader &mdash; STORM  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+      <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css?v=572af1d6" />
       <link rel="stylesheet" type="text/css" href="_static/thebelab.css" />
 
   
@@ -47,16 +47,16 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">内容:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Content</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">HDReader</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#HDReader.HDReader"><code class="docutils literal notranslate"><span class="pre">HDReader</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#HDReader.HDReader.read_all"><code class="docutils literal notranslate"><span class="pre">HDReader.read_all()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#HDReader.HDReader.read_feature"><code class="docutils literal notranslate"><span class="pre">HDReader.read_feature()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#HDReader.HDReader.read_h5"><code class="docutils literal notranslate"><span class="pre">HDReader.read_h5()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#HDReader.HDReader.read_image"><code class="docutils literal notranslate"><span class="pre">HDReader.read_image()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#HDReader.HDReader.read_json"><code class="docutils literal notranslate"><span class="pre">HDReader.read_json()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#HDReader.HDReader.read_tpl"><code class="docutils literal notranslate"><span class="pre">HDReader.read_tpl()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#storm.HDReader.HDReader"><code class="docutils literal notranslate"><span class="pre">HDReader</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#storm.HDReader.HDReader.read_all"><code class="docutils literal notranslate"><span class="pre">HDReader.read_all()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#storm.HDReader.HDReader.read_feature"><code class="docutils literal notranslate"><span class="pre">HDReader.read_feature()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#storm.HDReader.HDReader.read_h5"><code class="docutils literal notranslate"><span class="pre">HDReader.read_h5()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#storm.HDReader.HDReader.read_image"><code class="docutils literal notranslate"><span class="pre">HDReader.read_image()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#storm.HDReader.HDReader.read_json"><code class="docutils literal notranslate"><span class="pre">HDReader.read_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#storm.HDReader.HDReader.read_tpl"><code class="docutils literal notranslate"><span class="pre">HDReader.read_tpl()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -90,20 +90,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-HDReader">
-<span id="hdreader"></span><h1>HDReader<a class="headerlink" href="#module-HDReader" title="Link to this heading"></a></h1>
+  <section id="module-storm.HDReader">
+<span id="hdreader"></span><h1>HDReader<a class="headerlink" href="#module-storm.HDReader" title="Link to this heading"></a></h1>
 <p>This module provides the HDReader class for reading HD data.</p>
 <dl class="py class">
-<dt class="sig sig-object py" id="HDReader.HDReader">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">HDReader.</span></span><span class="sig-name descname"><span class="pre">HDReader</span></span><a class="headerlink" href="#HDReader.HDReader" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="storm.HDReader.HDReader">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">storm.HDReader.</span></span><span class="sig-name descname"><span class="pre">HDReader</span></span><a class="headerlink" href="#storm.HDReader.HDReader" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A class for reading HD data.</p>
 <p>This class provides methods to read various types of HD data, including images,
 tissue position information, slice features, JSON files, and H5 files.
 The data is stored in class attributes for further processing.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="HDReader.HDReader.read_all">
-<span class="sig-name descname"><span class="pre">read_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tpl_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slice_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sf_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raw_matrix_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HDReader.HDReader.read_all" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="storm.HDReader.HDReader.read_all">
+<span class="sig-name descname"><span class="pre">read_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tpl_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slice_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sf_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raw_matrix_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#storm.HDReader.HDReader.read_all" title="Link to this definition"></a></dt>
 <dd><p>Read all necessary HD data from the specified paths.</p>
 <p>This method calls other reading methods to read the image, tissue position information,
 slice features, JSON file, and H5 file in sequence, and stores the data in class attributes.</p>
@@ -124,8 +124,8 @@ slice features, JSON file, and H5 file in sequence, and stores the data in class
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="HDReader.HDReader.read_feature">
-<span class="sig-name descname"><span class="pre">read_feature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">slice_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HDReader.HDReader.read_feature" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="storm.HDReader.HDReader.read_feature">
+<span class="sig-name descname"><span class="pre">read_feature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">slice_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#storm.HDReader.HDReader.read_feature" title="Link to this definition"></a></dt>
 <dd><p>Read slice feature information from the specified path and store it in a class attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -138,8 +138,8 @@ slice features, JSON file, and H5 file in sequence, and stores the data in class
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="HDReader.HDReader.read_h5">
-<span class="sig-name descname"><span class="pre">read_h5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_matrix_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HDReader.HDReader.read_h5" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="storm.HDReader.HDReader.read_h5">
+<span class="sig-name descname"><span class="pre">read_h5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_matrix_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#storm.HDReader.HDReader.read_h5" title="Link to this definition"></a></dt>
 <dd><p>Read an H5 file containing raw matrix data from the specified path and store it in a class attribute.</p>
 <p>This method uses <cite>scanpy</cite> to read the H5 file and makes the gene names unique.</p>
 <dl class="field-list simple">
@@ -153,8 +153,8 @@ slice features, JSON file, and H5 file in sequence, and stores the data in class
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="HDReader.HDReader.read_image">
-<span class="sig-name descname"><span class="pre">read_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HDReader.HDReader.read_image" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="storm.HDReader.HDReader.read_image">
+<span class="sig-name descname"><span class="pre">read_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#storm.HDReader.HDReader.read_image" title="Link to this definition"></a></dt>
 <dd><p>Read an image file from the specified path and store it in a class attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -167,8 +167,8 @@ slice features, JSON file, and H5 file in sequence, and stores the data in class
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="HDReader.HDReader.read_json">
-<span class="sig-name descname"><span class="pre">read_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sf_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HDReader.HDReader.read_json" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="storm.HDReader.HDReader.read_json">
+<span class="sig-name descname"><span class="pre">read_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sf_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#storm.HDReader.HDReader.read_json" title="Link to this definition"></a></dt>
 <dd><p>Read a JSON file from the specified path and store the data in a class attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -181,8 +181,8 @@ slice features, JSON file, and H5 file in sequence, and stores the data in class
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="HDReader.HDReader.read_tpl">
-<span class="sig-name descname"><span class="pre">read_tpl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tpl_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#HDReader.HDReader.read_tpl" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="storm.HDReader.HDReader.read_tpl">
+<span class="sig-name descname"><span class="pre">read_tpl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tpl_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#storm.HDReader.HDReader.read_tpl" title="Link to this definition"></a></dt>
 <dd><p>Read tissue position information from the specified path and store it in a class attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>

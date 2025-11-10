@@ -306,21 +306,6 @@ class Cal_CMatrix:
         Returns:
             np.ndarray: The calculated stain color matrix.
         
-        .. jupyter-execute::
-        
-            from skimage import io
-            import os
-
-            # Assume the 'storm' directory is in the parent directory of the current working directory
-
-
-            from storm.pp.color_matrix import Cal_CMatrix
-            print(os.getcwd())
-            img_path='Visium_Human_Breast_Cancer/spatial/tissue_hires_image.png'
-            cmtx = Cal_CMatrix()
-            cmtx.readFile(img_path)
-            print(cmtx.get_cmtx())
-
         """
 
         return process_img(self.he, patch_size=1000, tissue_threshold=0.45, max_patches=20, method=method)

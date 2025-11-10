@@ -7,7 +7,7 @@ including stain matrix calculation and color channel extraction.
 import numpy as np
 from skimage import io, color, img_as_ubyte, filters
 from tqdm import tqdm
-from utils.Visium import exc_tissue
+from storm.utils.Visium import exc_tissue
 
 def is_uint8_image(x):
     """Check if the input is a uint8 image.

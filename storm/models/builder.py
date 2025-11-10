@@ -5,11 +5,11 @@ import torch.optim as optim
 from datasets import build_dataset_from_cfg
 from models import build_model_from_cfg
 # utils
-from utils.logger import *
-from utils.misc import *
+from storm.utils.logger import *
+from storm.utils.misc import *
 from timm.scheduler import CosineLRScheduler
 from torch.utils.data import DataLoader, Dataset, Sampler,BatchSampler
-from utils.checkpoint import get_missing_parameters_message, get_unexpected_parameters_message
+from storm.utils.checkpoint import get_missing_parameters_message, get_unexpected_parameters_message
 import itertools
 
 class CustomDistributedBatchSamplerDDP(BatchSampler):

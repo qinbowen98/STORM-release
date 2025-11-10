@@ -1,12 +1,12 @@
 import os
 import glob
 from pathlib import Path
-from utils.checkpoint import get_missing_parameters_message, get_unexpected_parameters_message
+from storm.utils.checkpoint import get_missing_parameters_message, get_unexpected_parameters_message
 import numpy as np
 import pandas as pd
 from PIL import Image
 from skimage import io
-from utils.logger import *
+from storm.utils.logger import *
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
