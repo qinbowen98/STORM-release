@@ -25,7 +25,7 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
     'sphinx.ext.mathjax',
-    'jupyter_sphinx'
+    # 'jupyter_sphinx'
 ]
 
 templates_path = ['_templates']

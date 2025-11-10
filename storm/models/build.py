@@ -1,5 +1,5 @@
 from utils import registry
-
+from storm.utils import registry
 MODELS = registry.Registry('models')
 
 
