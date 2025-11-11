@@ -444,6 +444,37 @@ and concatenates the resulting AnnData objects.</p>
 <dd class="field-odd"><p>None</p>
 </dd>
 </dl>
+<div class="jupyter_cell jupyter_container docutils container">
+<div class="cell_input code_cell docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">storm.VisiumReader</span> <span class="kn">import</span> <span class="n">VisiumReader</span>
+<span class="kn">from</span> <span class="nn">storm.pp</span> <span class="kn">import</span> <span class="n">VisiumPreprocesser</span>
+<span class="n">Reader</span><span class="o">=</span><span class="n">VisiumReader</span><span class="p">()</span>
+<span class="n">Reader</span><span class="o">.</span><span class="n">read_all</span><span class="p">(</span><span class="n">folder_path</span><span class="o">=</span><span class="s2">&quot;../Visium_Human_Breast_Cancer&quot;</span><span class="p">,</span><span class="n">gene_token</span><span class="o">=</span><span class="s2">&quot;../gene_token_homologs.csv&quot;</span><span class="p">,</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;binary&quot;</span><span class="p">,</span><span class="n">key</span><span class="o">=</span><span class="s2">&quot;symbol&quot;</span><span class="p">)</span>
+<span class="n">processer</span><span class="o">=</span><span class="n">VisiumPreprocesser</span><span class="p">(</span><span class="n">Reader</span><span class="p">,</span><span class="mi">224</span><span class="p">)</span>
+<span class="n">processer</span><span class="o">.</span><span class="n">process_tpl</span><span class="p">()</span>
+<span class="n">processer</span><span class="o">.</span><span class="n">round_spot</span><span class="p">()</span>
+<span class="n">processer</span><span class="o">.</span><span class="n">generate_grid</span><span class="p">()</span>
+<span class="n">processer</span><span class="o">.</span><span class="n">map_tissue</span><span class="p">()</span>
+<span class="n">processer</span><span class="o">.</span><span class="n">process_adata</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">processer</span><span class="o">.</span><span class="n">fnl_adata</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>gene id matches:
+human:15597 
+mouse:16
+</pre></div>
+</div>
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>3839
+</pre></div>
+</div>
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>AnnData object with n_obs × n_vars = 50686 × 15757
+    var: &#39;gene_ids_x&#39;, &#39;feature_types&#39;, &#39;genome&#39;, &#39;symbol_x&#39;, &#39;gene_ids_y&#39;, &#39;symbol_y&#39;
+</pre></div>
+</div>
+</div>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -475,6 +506,87 @@ in the processed H&amp;E image. Each element corresponds to a color channel (e.g
 <dd class="field-even"><p>tuple</p>
 </dd>
 </dl>
+<div class="jupyter_cell jupyter_container docutils container">
+<div class="cell_input code_cell docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">storm.VisiumReader</span> <span class="kn">import</span> <span class="n">VisiumReader</span>
+<span class="kn">from</span> <span class="nn">storm.pp</span> <span class="kn">import</span> <span class="n">VisiumPreprocesser</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">Reader</span><span class="o">=</span><span class="n">VisiumReader</span><span class="p">()</span>
+<span class="n">Reader</span><span class="o">.</span><span class="n">read_all</span><span class="p">(</span><span class="n">folder_path</span><span class="o">=</span><span class="s2">&quot;../Visium_Human_Breast_Cancer&quot;</span><span class="p">,</span><span class="n">gene_token</span><span class="o">=</span><span class="s2">&quot;../gene_token_homologs.csv&quot;</span><span class="p">,</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;binary&quot;</span><span class="p">,</span><span class="n">key</span><span class="o">=</span><span class="s2">&quot;symbol&quot;</span><span class="p">)</span>
+
+<span class="n">processer</span><span class="o">=</span><span class="n">VisiumPreprocesser</span><span class="p">(</span><span class="n">Reader</span><span class="p">,</span><span class="mi">224</span><span class="p">)</span>
+<span class="n">_</span><span class="p">,</span><span class="n">_</span><span class="p">,</span><span class="n">_</span><span class="p">,</span><span class="n">_</span><span class="p">,</span><span class="n">raw_crop_he</span><span class="p">,</span><span class="n">crop_he</span><span class="o">=</span><span class="n">processer</span><span class="o">.</span><span class="n">process_img</span><span class="p">()</span>
+<span class="n">fig</span><span class="p">,</span><span class="n">axs</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">raw_crop_he</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">crop_he</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">processer</span><span class="o">.</span><span class="n">tissue_position_list</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span><span class="n">processer</span><span class="o">.</span><span class="n">final_tpl</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span><span class="n">processer</span><span class="o">.</span><span class="n">tissue_grid</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>gene id matches:
+human:15597 
+mouse:16
+</pre></div>
+</div>
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>                    in_tissue  spot_y  spot_x  pxl_y_fullres  pxl_x_fullres  \
+barcode                                                                       
+ACGCCTGACACGCGCT-1        1.0     0.0     0.0         4650.0        12203.0   
+TACCGATCCAACACTT-1        1.0     1.0     1.0         4887.0        12338.0   
+ATTAAAGCGGACGAGC-1        1.0     0.0     2.0         4651.0        12475.0   
+GATAAGGGACGATTAG-1        1.0     1.0     3.0         4888.0        12609.0   
+GTGCAAATCACCAATA-1        1.0     0.0     4.0         4653.0        12747.0   
+
+                    pxl_y_hires  pxl_x_hires  \
+barcode                                        
+ACGCCTGACACGCGCT-1   223.708264   587.077837   
+TACCGATCCAACACTT-1   235.110169   593.572593   
+ATTAAAGCGGACGAGC-1   223.756373   600.163567   
+GATAAGGGACGATTAG-1   235.158278   606.610214   
+GTGCAAATCACCAATA-1   223.852592   613.249298   
+
+                                            top_left_before top_left_after  
+barcode                                                                     
+ACGCCTGACACGCGCT-1  (582.8310287943084, 219.46145568230844)     (580, 216)  
+TACCGATCCAACACTT-1  (589.3257848343085, 230.86336073030844)     (588, 228)  
+ATTAAAGCGGACGAGC-1  (595.9167594823084, 219.50956498630842)     (592, 216)  
+GATAAGGGACGATTAG-1  (602.3634062183085, 230.91147003430842)     (600, 228)  
+GTGCAAATCACCAATA-1  (609.0024901703084, 219.60578359430843)     (608, 216)                       in_tissue  spot_y  spot_x  tl_x  tl_y  center_x  center_y  \
+barcode                                                                         
+ACGCCTGACACGCGCT-1        1.0     0.0     0.0     4     0        12        -8   
+TACCGATCCAACACTT-1        1.0     1.0     1.0    12    12        20         4   
+ATTAAAGCGGACGAGC-1        1.0     0.0     2.0    16     0        24        -8   
+GATAAGGGACGATTAG-1        1.0     1.0     3.0    24    12        32         4   
+GTGCAAATCACCAATA-1        1.0     0.0     4.0    32     0        40        -8   
+
+                    num  
+barcode                  
+ACGCCTGACACGCGCT-1    1  
+TACCGATCCAACACTT-1    2  
+ATTAAAGCGGACGAGC-1    3  
+GATAAGGGACGATTAG-1    4  
+GTGCAAATCACCAATA-1    5                 tl_xn  tl_yn  in_tissue      position          barcode_55  \
+index                                                                     
+s_004_0_0-n     0.0    0.0        1.0   s_004_0_0-n                   0   
+s_004_4_0-n     4.0    0.0        1.0   s_004_4_0-n                   0   
+s_004_8_0-n     8.0    0.0        1.0   s_004_8_0-n                   0   
+s_004_12_0-n   12.0    0.0        1.0  s_004_12_0-n                   0   
+s_004_16_0-n   16.0    0.0        1.0  s_004_16_0-n  TACCGATCCAACACTT-1   
+
+              spot_x  spot_y  
+index                         
+s_004_0_0-n      0.0     0.0  
+s_004_4_0-n      1.0     0.0  
+s_004_8_0-n      2.0     0.0  
+s_004_12_0-n     3.0     0.0  
+s_004_16_0-n     4.0     0.0  
+</pre></div>
+</div>
+<img alt="_images/pp_1_4.png" src="_images/pp_1_4.png" />
+</div>
+</div>
 </dd></dl>
 
 <dl class="py method">

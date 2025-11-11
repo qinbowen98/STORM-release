@@ -34,6 +34,16 @@ class VisiumReader:
         Returns:
             None
 
+        .. jupyter-execute::
+        
+            from storm.VisiumReader import VisiumReader
+            
+            import matplotlib.pyplot as plt
+            Reader=VisiumReader()
+            Reader.read_all(folder_path="../Visium_Human_Breast_Cancer",gene_token="../gene_token_homologs.csv",method="binary",key="symbol")
+            plt.imshow(Reader.raw_he)
+            print(Reader.adata , Reader.tissue_position_list.head(5) , Reader.scaleJson)
+
         """
         self.key = key
         self.method = method
@@ -54,6 +64,15 @@ class VisiumReader:
         Returns:
             None
 
+        .. jupyter-execute::
+        
+            from storm.VisiumReader import VisiumReader
+            
+            import matplotlib.pyplot as plt
+            Reader=VisiumReader()
+            Reader.read_img("../Visium_Human_Breast_Cancer/spatial/tissue_hires_image.png")
+            plt.imshow(Reader.raw_he)
+
         """
         self.raw_he = io.imread(raw_img_path)
         if self.raw_he.ndim == 3 and self.raw_he.shape[2] == 4:
@@ -73,6 +92,15 @@ class VisiumReader:
 
         Returns:
             None
+
+        .. jupyter-execute::
+        
+            from storm.VisiumReader import VisiumReader
+            Reader=VisiumReader()
+            base_path="../Visium_Human_Breast_Cancer/spatial"
+            Reader.read_tissue_position(raw_tpl_path=f"{base_path}/tissue_positions_list.csv",
+                                        json_path=f"{base_path}/scalefactors_json.json")
+            print(Reader.tissue_position_list.head(5))
         
         """
         tpl = pd.read_csv(raw_tpl_path, header=None)
@@ -109,6 +137,13 @@ class VisiumReader:
 
         Returns:
             None
+
+        .. jupyter-execute::
+        
+            from storm.VisiumReader import VisiumReader
+            Reader=VisiumReader()
+            Reader.read_h5(h5_path="../Visium_Human_Breast_Cancer/filtered_feature_bc_matrix.h5",gene_token="../gene_token_homologs.csv",method="binary",key="symbol")
+            print(Reader.adata)
 
         """
         self.method = method
