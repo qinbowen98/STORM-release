@@ -491,20 +491,6 @@ class VisiumPreprocesser:
         Returns:
             None
 
-        .. jupyter-execute::
-        
-            from storm.VisiumReader import VisiumReader
-            from storm.pp import VisiumPreprocesser
-            Reader=VisiumReader()
-            Reader.read_all(folder_path="../../Visium_Human_Breast_Cancer",gene_token="../../gene_token_homologs.csv",method="binary",key="symbol")
-            processer=VisiumPreprocesser(Reader,224)
-            processer.process_tpl()
-            processer.round_spot()
-            processer.generate_grid()
-            processer.map_tissue()
-            processer.process_adata()
-            print(processer.fnl_adata)
-
         """
         self.find_avg_grid()
         self.insert_grid()
